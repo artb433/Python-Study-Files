@@ -1,4 +1,4 @@
-#Ask the user to input their name
+# Ask the user to input their name
 
 name = input("What is your name: ")
 print('Hello ', name)
@@ -84,3 +84,10 @@ for i in range(1, 10):
 
 for i in range(1, 11):
     print("{:3d} {:4d} {:5d}".format(i, i*i, i*i*i))
+
+for i in range(10):
+    print(f"i{i+1} = ", i)
+
+for i in range(1, 21):
+    if (i % 2) != 0:
+        print(f"i({i}) = ", i)
