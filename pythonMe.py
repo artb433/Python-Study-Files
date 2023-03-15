@@ -2,7 +2,7 @@
 #
 # name = input("What is your name: ")
 # print('Hello ', name)
-# 
+#
 #
 # num1 = int(input('Enter first number '))
 # num2 = int(input('Enter second number '))
@@ -91,3 +91,69 @@
 # for i in range(1, 21):
 #     if (i % 2) != 0:
 #         print(f"i({i}) = ", i)
+
+# if True:
+#     print("Holberton")
+# else:
+#     print("School")
+#
+# for i in range(4):
+#     print(i, end=" ")
+
+# for i in range(2, 4):
+#     print(i, end=" ")
+
+
+# import random
+# number = random.randint(-10000, 10000)
+# if int(str(number)[-1]) > 5:
+#     print(f"Last digit of {number} is {str(number)[-1]} and is greater than 5")
+# elif int(str(number)[-1]) == 0:
+#     print(f"Last digit of {number} is {str(number)[-1]} and is 0")
+# elif (int(str(number)[-1]) < 6) and (int(str(number)[-1]) != 0):
+#     print(f"Last digit of {number} is {str(number)[-1]} and is less than 6 and not 0")
+
+# for i in range(97, 123):
+#     print("{}".format(chr(i)), end="")
+
+# for i in range(97, 123):
+#     if i != 113 and i != 101:
+#         print("{}".format(chr(i)), end="")
+
+# for i in range(0, 99):
+#     print("{} = {}".format(i, hex(i)))
+
+# for i in range(00, 100):
+#     if i != 99:
+#         print("{0:0=2d}".format(i), end=", ")
+#     else:
+#         print("{}".format(i))
+
+# for i in range(0, 10):
+#     for j in range(0, 10):
+#         if j > i:  # check if j is greater than i before printing
+#             if i == 8 and j == 9:
+#                 print("{}{}".format(i, j))
+#                 break
+#             print("{}{}".format(i, j), end=", ")
+
+# your_float = input("Enter a float: ")
+# your_float = float(your_float)
+# print("Round to 2 decimals: {:.2f}".format(your_float))
+
+# # TODO: THE CODE BELOW CALCULATES COMPOUND INTEREST BY TAKING THE INVESTED AMOUNT, INTEREST RATE AND NUMBER OF YEARS
+# money = input("Enter your investment amount: ")
+# money = float(money)
+# interest_rate = input("Enter the interest rate without percentage: ")
+# interest_rate = float(interest_rate) / 100
+# number_of_years = input("Enter the number of years without decimals: ")
+# number_of_years = int(number_of_years)
+# for i in range(number_of_years):
+#     money = money + (money * interest_rate)
+# print("Your expected return after 10years is: {:.2f}".format(money))
+
+
+def my_function():
+    print("In my function")
+    
+my_function
