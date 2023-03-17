@@ -1,4 +1,4 @@
-# # Ask the user to input their name
+# Ask the user to input their name
 
 name = input("What is your name: ")
 print('Hello ', name)
@@ -58,10 +58,12 @@ elif (age >= 6) and (age <= 17):
 else:
     print('Goes to college')
 
+
 str1 = "Holberton"
 str2 = "School"
 str1 = str1 +" "+ str2
 print(f"Welcome to {str1}!")
+
 
 #!/usr/bin/python3
 word = "Holberton"
@@ -71,6 +73,7 @@ middle_word = word[1:-1]
 print(f"First 3 letters: {word_first_3}")
 print(f"Last 2 letters: {word_last_2}")
 print(f"Middle word: {middle_word}")
+
 
 #!/usr/bin/python3
 str = "Python is an interpreted, interactive, object-oriented programming\
@@ -92,6 +95,7 @@ for i in range(1, 21):
     if (i % 2) != 0:
         print(f"i({i}) = ", i)
 
+
 if True:
     print("Holberton")
 else:
@@ -99,6 +103,7 @@ else:
 
 for i in range(4):
     print(i, end=" ")
+
 
 for i in range(2, 4):
     print(i, end=" ")
@@ -113,21 +118,26 @@ elif int(str(number)[-1]) == 0:
 elif (int(str(number)[-1]) < 6) and (int(str(number)[-1]) != 0):
     print(f"Last digit of {number} is {str(number)[-1]} and is less than 6 and not 0")
 
+
 for i in range(97, 123):
     print("{}".format(chr(i)), end="")
+
 
 for i in range(97, 123):
     if i != 113 and i != 101:
         print("{}".format(chr(i)), end="")
 
+
 for i in range(0, 99):
     print("{} = {}".format(i, hex(i)))
+
 
 for i in range(00, 100):
     if i != 99:
         print("{0:0=2d}".format(i), end=", ")
     else:
         print("{}".format(i))
+
 
 for i in range(0, 10):
     for j in range(0, 10):
@@ -137,9 +147,11 @@ for i in range(0, 10):
                 break
             print("{}{}".format(i, j), end=", ")
 
+
 your_float = input("Enter a float: ")
 your_float = float(your_float)
 print("Round to 2 decimals: {:.2f}".format(your_float))
+
 
 # TODO: THE CODE BELOW CALCULATES COMPOUND INTEREST BY TAKING THE INVESTED AMOUNT, INTEREST RATE AND NUMBER OF YEARS
 money = input("Enter your investment amount: ")
@@ -177,9 +189,87 @@ for i in range(stump_spaces):
     print(" ", end="")
 print("#")
 
+
 main_string = input("Enter the full phrase: ")
 main_string = main_string.split()
 for i in main_string:
     acronym = i[0].upper()
     print(acronym, end="")
 
+
+def add_numbers(num1, num2):
+    return num1 + num2
+
+print("Sum =", add_numbers(4,3))
+
+
+
+def change_name(name):
+    return "Hi " +name
+name = input("Enter the name: ")
+name = change_name(name)
+print(name)
+
+
+gbl_name = "Matthew"
+def alter_name():
+    global gbl_name
+    gbl_name = "Andrew Carnegie"
+
+alter_name()
+print(gbl_name)
+
+
+def solve_eq(equation):
+    x, add, num1, equal, num2 = equation.split()
+    num1, num2 = int(num1), int(num2)
+    return "X = " + str(num2-num1)
+
+print(solve_eq("x + 4 = 9"))
+
+
+def mult_divide():
+    num1 = int(input("Enter your first number: "))
+    num2 = int(input("Enter your second number: "))
+    return "Multiplication of {} and {} = ".format(num1,num2) + str(num1 * num2), "Division of {} and {} = ".format(num1,num2) + str(num1/num2)
+mult, divide = mult_divide()
+print(mult + " and " + divide)
+
+
+num = int(input("Enter your number:"))
+for i in range(num):
+    if i % 2 != 0:
+        print(i)
+
+
+def sumAll(*args):
+    sum = 0
+    for i in args:
+        sum += i
+    return sum
+
+print("Sum :",sumAll(1,2,4,5,3,5,6,43,5,6,4,6,4,3,5,6,4,3,5,6,6,))
+
+
+import math
+def get_area(shape):
+    if shape == "rectangle":
+        rectangle_area()
+    elif shape == "circle":
+        circle_area()
+    else: print("Please enter circle or rectangel")
+def rectangle_area():
+    length = float(input("Enter the length of the rectangle: "))
+    height = float(input("Enter the height of the rectangle: "))
+    area = length*height
+    print("The area of the rectangle is: {:.2f} to two decimal places".format(area))
+def circle_area():
+    radius = float(input("Enter the radius of the circle: "))
+    area = math.pi * math.pow(radius, 2)
+    print("The area of the circle is: {:.2f} to two decimal places".format(area))
+def main():
+    shape= input("Enter the name of the shape: ")
+    shape = shape.lower()
+    get_area(shape)
+
+main()
