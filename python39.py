@@ -13,3 +13,4 @@ with open("mydata.txt", encoding="utf-8") as myFile:
 # os.rename("mydata.txt", "mydata2.txt")
 
 print("Current directory : ", os.getcwd())
+ 

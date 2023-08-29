@@ -1,19 +1,71 @@
-def fib(n):
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        result = fib(n - 1) + fib(n - 2)
-        return result
+# class Dog:
+#     def __int__(self, name="", height=0, weight=0):
+#         self.name = name
+#         self.height = height
+#         self.weight = weight
+#
+#     def run(self):
+#         print("The {} dog runs".format(self.name))
+#
+#     def eat(self):
+#         print("The {} dog eats".format(self.name))
+#
+#     def bark(self):
+#         print("The {} dog barks".format(self.name))
+#
+#
+# def main():
+#     spot = Dog()
+#     spot.name = "Spot"
+#     spot.bark()
+#
+#     bowser = Dog()
+#     bowser.name = "Bowser"
+#     bowser.eat()
+#
+#
+# main()
 
 
-numFibValues = int(input("How many fibonacci values should be found: "))
-i = 1
-while i < numFibValues:
-    fibValue = fib(i)
-    print(fibValue)
+class Square:
+    def __init__(self, height="0", width="0"):
+        self.height=height
+        self.width = width
+    @property
+    def height(self):
+        print("Retrieving the height")
+        return self.__height
+    @height.setter
+    def height(self, value):
+        if value.isdigit():
+            self.__height = value
+        else:
+            print("Please only enter numbers for height")
 
-    i += 1
+    @property
+    def width(self):
+        print("Retrieving the width")
+        return self.__width
 
-print(f"Here is fibonacci values of {numFibValues} numbers")
+    @width.setter
+    def width(self, value):
+        if value.isdigit():
+            self.__width = value
+        else:
+            print("Please only enter numbers for width")
+    def getArea(self):
+        return int(self.__width) * int(self.__height)
+def main():
+    aSquare = Square()
+    height = input("Enter height: ")
+    width = input("Enter width: ")
+    aSquare.height = height
+    aSquare.width = width
+
+    print("Height :", aSquare.height)
+    print("Width :", aSquare.width)
+    print("The Area is :", aSquare.getArea())
+
+
+
+main()
