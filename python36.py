@@ -5,9 +5,11 @@ while True:
     if createEntry == "n":
         break
     elif createEntry == "y":
-        cName = input("Enter Customer name: ")
-        customers.append(cName)
+        fName = input("Enter Customer first name: ")
+        lName = input("Enter Customer last name: ")
+        customers.append({"first Name": fName, "last Name": lName})
     else:
         print("Choose between yes or no")
 for customer in customers:
-    print(customer)
+    print(customer['last Name'], customer['first Name'])
+
